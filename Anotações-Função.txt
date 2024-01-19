@@ -1,0 +1,9 @@
+JAVASCRIPT FUNÇÕES---------------------------------------------------------------
+
+ativ1:
+Tipos de funções: formas de declarar (normal, atribuídas a uma var, em um obj,
+como parâmetro, retornando uma)
+Parâmetros padrões: formas de informas valores padrões ao parâmetros
+Arguments: referencia aos valores dos parâmetros em formato de array
+This_Bind: como "amarrar" o this ao objeto referenciado independente do lugar 
+que chamar
