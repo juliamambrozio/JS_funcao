@@ -100,10 +100,155 @@ function Notas(nota){
     const notaMaxima = 100
     const notaMinima = 0
 
-    if(nota > 40){
-        const módulo = nota % 5 
+    if(nota <= notaMaxima && nota >= notaMinima){
+
+    if(nota > 37){
+        const modulo = nota % 5 
+        if(modulo != 0){
+            if(nota >= 38){
+            //console.log(Math.floor(nota / 5) * 5 + 5)
+            let notaFinal = Math.floor(nota / 5) * 5 + 5
+            console.log(`Aprovado! Sua nota é ${notaFinal}`)
+        }
+
+            
+        }else{
+            console.log(`Aprovado! Sua nota é ${nota}`)
+        }
+    }else{
+        console.log(`Reprovado, sua nota é ${nota}`)
     }
 
+}else{
+    console.log('Nota inválida')
+}
+}
+Notas(37)
+
+//Exercício 10
+function divisivelPor3(num){
+    numero = num % 3
+    if(numero == 0){
+        return console.log(true)
+    }else{
+        return console.log(false)
+    }
+}
+
+divisivelPor3(3)
+
+//Exercício 11
+function calculandoAno(ano){
+    let ano2 = ano % 4
+    if(ano2 == 0){
+        console.log(`O ano ${ano} é bissexto? ${true}`)
+    }else{
+        console.log(`O ano ${ano} é bissexto? ${false}`)
+    }
+}
+calculandoAno(2025)
+
+//Exercício 12
+function fatorial(num){
+    if(num < 0){
+        return -1
+    }else if(num == 0){
+        return 1
+    }else{
+        return (num * fatorial(num - 1))
+    }
+}
+
+console.log(fatorial(5))
+
+//Exercício 13
+function diasUteis(dia){
+switch(dia){
+    case 1: 
+        console.log(`Fim de semana`)
+    break;
+    case 2: 
+    case 3: 
+    case 4: 
+    case 5: 
+    case 6:
+        console.log('Dia útil')
+    break; 
+    case 7: 
+        console.log(`Fim de semana`)
+    break;
+    default:
+        console.log(`Dia de semana inválido`)
+}
+}
+
+diasUteis(10)
+diasUteis(6)
+
+//Exercício 14
+function vendinha(fruta){
+    switch(fruta){
+        case 'Maçã':
+            console.log('Não vendemos esta fruta aqui')
+        break;
+        case 'Kiwi':
+            console.log('Estamos com escassez de kiwis')
+        break;
+        case 'Melancia':
+            console.log('Aqui está, são 3 reais o quilo')
+        break;
+        default: console,log('Erro')
+
+    }
+   
+}
+vendinha('Kiwi')
+
+//Exercício 15
+function revendaDeCarros(marca){
+    switch(marca){
+        case 'hatch': 
+        console.log('Compra efetuada com sucesso')
+        break;
+        case 'sedans':
+        case 'motocicletas':
+        case 'caminhonetes': 
+        console.log('Tem certeza que não prefere este modelo?')
+        break;
+        default: console.log('Não trabalhamos com este tipo de automóvel aqui')
+        break;
+    }
+}
+
+revendaDeCarros('hatch')
+revendaDeCarros('motocicletas')
+revendaDeCarros('uno')
+
+//Exercício 16
+function calculadora(a, b, operacao){
+    switch(operacao){
+        case '+':
+        console.log(a + b)
+        break;
+        case '-':
+        console.log(a - b)
+        break;
+        case '*':
+        console.log(a * b)
+        break;
+        case '/':
+        console.log(a / b)
+        break;
+    }
 
 }
-//Exercício 10
+
+calculadora(2, 4, '+')
+calculadora(2, 4, '-')
+calculadora(2, 4, '*')
+calculadora(2, 4, '/')
+
+//Exercício 17
+
+
+
