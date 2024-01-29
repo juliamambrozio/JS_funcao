@@ -491,8 +491,30 @@ while(num1 <= 100){
 }
 
 //Exercício 27
+/* function crescimento(altura1, taxa1, altura2, taxa2){
+    let Altura1 = altura1 * 100
+    let Altura2 = altura2 * 100
+    let Taxa1 = taxa1 * 100
+    let Taxa2 = taxa2 * 100
+
+    if(Altura1 < Altura2){
+        
+        for(let anos = 0; Altura1 == Altura2; anos++){
+             Altura1 + Taxa1
+            console.log(anos)
+        }
+        if(Altura2 < Altura1){
+            
+        }
+
+    }
+
+}
+
+crescimento(1.80, 0.20, 1.90, 0.10) */
 
 //Exercício 28
+
 //Exercício 29
 //Exercício 30
 //Exercício 31
