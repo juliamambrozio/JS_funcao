@@ -249,6 +249,257 @@ calculadora(2, 4, '*')
 calculadora(2, 4, '/')
 
 //Exercício 17
+function aumentarSalarioAtual(tipoPlano, salario){
+    switch(tipoPlano){
+        case 'A':
+            let acrescimoA = (salario * 10) / 100
+            let salarioAtualA = salario + acrescimoA 
+            console.log(`Sálario antigo ${salario}, salário atual: ${salarioAtualA}`)
+        break;
+        case 'B':
+            let acrescimoB = (salario * 15) / 100
+            let salarioAtualB = salario + acrescimoB 
+            console.log(`Sálario antigo ${salario}, salário atual: ${salarioAtualB}`)
+        break;
+        case 'C':
+            let acrescimoC = (salario * 20) / 100
+            let salarioAtualC = salario + acrescimoC 
+            console.log(`Sálario antigo ${salario}, salário atual: ${salarioAtualC}`)
+        break;
+        default:
+            console.log('Plano inválido')
+        break;
+    }
+}
+
+aumentarSalarioAtual('A', 1230)
+aumentarSalarioAtual('B', 1230)
+aumentarSalarioAtual('C', 1230)
+aumentarSalarioAtual('D', 1230)
+
+//Exercício 18
+function numeralExtenso(num){
+    switch(num){
+        case 0:
+            console.log('zero')
+        break;
+        case 1:
+            console.log('um')
+        break;
+        case 2:
+            console.log('dois')
+        break;
+        case 3:
+            console.log('três')
+        break;
+        case 4:
+            console.log('quatro')
+        break;
+        case 5:
+            console.log('cinco')
+        break;
+        case 6:
+            console.log('seis')
+        break;
+        case 7:
+            console.log('sete')
+        break;
+        case 8:
+            console.log('oito')
+        break;
+        case 9:
+            console.log('nove')
+        break;
+        case 10:
+            console.log('dez')
+        break;
+        default: 
+        console.log('Número fora do intervalo')
+        break;
+    }
+}
+numeralExtenso(18)
+
+//Exercício 19
+function lanchonete(quantidade, codigo){
+    switch(codigo){
+        case 100:
+            let precoCachorroQuente = 3.00
+            let valorFinalCachorroQuente = quantidade * precoCachorroQuente
+            console.log(`Cachorro-Quente: ${quantidade}, preço: R$${valorFinalCachorroQuente} `)
+        break;
+        case 200:
+            let precoHamburguerSimples = 4.00
+            let valorFinalHamburguerSimples = quantidade * precoHamburguerSimples
+            console.log(`Hambúrguer Simples: ${quantidade}, preço: R$${valorFinalHamburguerSimples} `)
+        break;
+        case 300:
+            let precoCheeseburguer = 5.50
+            let valorFinalCheeseburguer = quantidade * precoCheeseburguer
+            console.log(`Cheeseburguer: ${quantidade}, preço: R$${valorFinalCheeseburguer} `)
+        break;
+        case 400:
+            let precoBauru = 7.50
+            let valorFinalBauru = quantidade * precoBauru
+            console.log(`Bauru: ${quantidade}, preço: R$${valorFinalBauru} `)
+        break;
+        case 500:
+            let precoRefrigerante = 3.50
+            let valorFinalRefrigerante = quantidade * precoRefrigerante
+            console.log(`Refrigerante: ${quantidade}, preço: R$${valorFinalRefrigerante} `)
+        break;
+        case 600:
+            let precoSuco = 2.80
+            let valorFinalSuco = quantidade * precoSuco
+            console.log(`Suco: ${quantidade}, ${valorFinalSuco} `)
+        break;
+        default: console.log('Produto não existe')
+
+    }
+}
+
+lanchonete(2, 100)
+
+//Exercício 20
+/* function imprimirCedulas(valor){
+    let notasUtilizadas = []
+    for(let quantidade = 0; nota100 = valor; quantidade ){
+        console.log(typeOf(nota100))
+        if(nota100 <= valor){
+            console.log(notasUtilizadas.push = nota100)
+      
+        }
+    }
+}
+
+console.log(imprimirCedulas(200)) */
+
+//Exercício 21
+function planoDeSaude(idade){
+    const valorFixo = 100
+    if(idade <= 10){
+        const valorTotal = 100 + 80
+        console.log(`Valor a ser pago é: R$${valorTotal}`)
+    }else if(idade <= 30){
+        const valorTotal = 100 + 50
+        console.log(`Valor a ser pago é: R$${valorTotal}`)
+    }else if(idade <= 60){
+        const valorTotal = 100 + 95
+        console.log(`Valor a ser pago é: R$${valorTotal}`)
+    }else{
+        const valorTotal = 100 + 130
+        console.log(`Valor a ser pago é: R$${valorTotal}`)
+    }
+}
+planoDeSaude(61)
+
+//Exercício 22
+
+function cobrarJuros(capital, mes){
+    switch(mes){
+        case 1: 
+        //M = C * (1 + i)^t
+        const montante1 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante1.toFixed(2).replace('.', ','))
+        break;
+        case 2: 
+        const montante2 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante2.toFixed(2).replace('.', ','))
+        break;
+        case 3: 
+        const montante3 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante3.toFixed(2).replace('.', ','))
+        break;
+        case 4:
+        const montante4 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante4.toFixed(2).replace('.', ',')) 
+        break;
+        case 5: 
+        const montante5 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante5.toFixed(2).replace('.', ','))
+        break;
+        case 6: 
+        const montante6 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante6.toFixed(2).replace('.', ','))
+        break;
+        case 7: 
+        const montante7 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante7.toFixed(2).replace('.', ','))
+        break;
+        case 8:
+        const montante8 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante8.toFixed(2).replace('.', ',')) 
+        break;
+        case 9: 
+        const montante9 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante9.toFixed(2).replace('.', ','))
+        break;
+        case 10: 
+        const montante10 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante10.toFixed(2).replace('.', ','))
+        break;
+        case 11: 
+        const montante11 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante11.toFixed(2).replace('.', ','))
+        break;
+        case 12: 
+        const montante12 = capital * Math.pow((1 + 0.05 * mes), 2) 
+        console.log(montante12.toFixed(2).replace('.', ','))
+        break;
+        
+    }
+}
+
+cobrarJuros(100, 1)
+cobrarJuros(100, 2)
+cobrarJuros(100, 12)
+
+//Exercício 23
+function calcularMeida(codigoAluno, nota1, nota2, nota3){
+    const mediaFinal = ((nota1 * 4) + (nota2 * 3) + (nota3 *3)) / 10
+
+    console.log(`Código aluno: ${codigoAluno}, nota: ${mediaFinal}, status: ${mediaFinal >= 5 ? 'Aprovado' : 'Reprovado' }`)
+}
+
+calcularMeida(11, 2, 3, 4)
+
+//Exercício 24
+let frase = 0
+while(frase < 10){
+    frase++
+    console.log('Hello World!')
+    
+}
+
+//Exercício 25
+let num = 1
+
+while(num <= 50){
+    console.log(num)
+    num++
+}
+
+//Exercício 26
+let num1 = 1
+
+while(num1 <= 100){
+    if(num1 % 2 == 0){
+        console.log(num1)
+        
+    }
+    num1++
+}
+
+//Exercício 27
+
+//Exercício 28
+//Exercício 29
+//Exercício 30
+//Exercício 31
+//Exercício 32
+//Exercício 33
+
+
 
 
 
