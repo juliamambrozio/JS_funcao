@@ -76,25 +76,30 @@ function formulaBhaskara(ax2, bx, c){
 formulaBhaskara(1, 3, 2)
 
 //Exercício 8
-/* let pontuacaoJogos = [2, 10, 24, 12, 14]
+let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56, 0"
+ 
+ 
+function avaliaPontuacoes (stringPontuacoes) {
+    let pontuacoes = stringPontuacoes.split(", ")
+    let qtdQuebraDeRecords = 0
+    let piorJogo = 1
+    let maiorPontuacao = pontuacoes[0]
+    let menorPontuacao = pontuacoes[0]
 
-function desempenho(pontuacaoJogos){
-    let jogos = []
-    for(i = 0; i < pontuacaoJogos.length; i++){
-        if(pontuacaoJogos[i] > pontuacaoJogos[i++]){
-            let melhorJogo = 0
-            return melhorJogo++
+    for (let i = 1; i < pontuacoes.length; i++) {
+        if(parseInt(pontuacoes[i]) > parseInt(maiorPontuacao)) {
+            maiorPontuacao = pontuacoes[i]
+            qtdQuebraDeRecords++
+        }else if (parseInt(pontuacoes[i]) < parseInt(menorPontuacao)) {
+            menorPontuacao = pontuacoes[i]
+            piorJogo = i+1;
         }
-        if(pontuacaoJogos.toFilter(function (i){
-            if(pontuacaoJogos[i] < pontuacaoJogos[i++]){
-                console.log(`${[i]}`)
-            }
-        }))
     }
-
+    return [qtdQuebraDeRecords, piorJogo]
 }
+ 
+console.log(avaliaPontuacoes(stringPontuacoes))
 
-desempenho(pontuacaoJogos) */
 //Exercício 9
 function Notas(nota){
     const notaMaxima = 100
@@ -514,12 +519,103 @@ while(num1 <= 100){
 crescimento(1.80, 0.20, 1.90, 0.10) */
 
 //Exercício 28
+function imprimirParesImpares(numero){
+    let numeroPar = []
+    let numeroImpar = []
+    for(let i = 1; i <= numero; i++){
+        
+        if(i % 2 == 0){
+            numeroPar.push(i)
+           
+        }
+        if(i % 2 !== 0){
+            numeroImpar.push(i)
+            
+        }
+        
+    }
+    console.log(`Quantidade de números pares: ${numeroPar.length}`)
+    console.log(`Quantidade de números ímpares: ${numeroImpar.length}`) 
+}
+
+imprimirParesImpares(50)
 
 //Exercício 29
+function imprimirIntervalo(numero){
+    let intervaloDezVinte = 0
+
+    for(let i = 1; i <= numero.length; i++){
+        if(numero[i] >= 10  && numero[i] <= 20 ){
+            intervaloDezVinte++
+        }
+    }
+    console.log(`Quantidade de números dentro do intervalo: ${intervaloDezVinte}`) 
+}
+
+imprimirIntervalo([50, 30, 50, 10, 20, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
 //Exercício 30
+function maiorMenor (vetor) {
+    let maior = []
+    let menor = []
+    for (let i = 0; i < vetor.length; i++){
+        if (maior === undefined && menor === undefined){
+            maior = vetor[i]
+            menor = vetor[i]
+        } else {
+            if (vetor[i] > vetor[i + 1]){
+                maior = vetor[i]
+            }
+            if(vetor[i] < vetor[i + 1]){
+                menor = vetor[i]
+            }
+        }
+    }
+    console.log([maior, menor])
+}
+
+vetor =  [20, 5, 7, 3, 1, 3, 11, 20, 6, 9]
+
+maiorMenor(vetor)
+
 //Exercício 31
+function valoresNegativos(vetor){
+    let quantidade = []
+    for(let i = 0; i <= vetor.length; i++){
+        if(vetor[i] < 0){
+            quantidade.push(vetor[i])
+
+        }
+    }
+    console.log(`Quantidade: ${quantidade.length}`)
+}
+valoresNegativos([-1, 2, 3, 4, 5, 6, -2])
+
 //Exercício 32
-//Exercício 33
+function mediaAritmetica(vetor){
+    let soma = 0
+    let media = 0
+   
+    for(let i = 0; i < vetor.length; i++){
+        
+        let soma2 = soma += vetor[i]
+
+        media = soma2 / vetor.length
+        
+    }
+
+    console.log(media)
+}
+
+mediaAritmetica([10, 20, 30, 40, 50])
+
+//Exercício 34
+//Exercício 35
+//Exercício 36
+//Exercício 37
+//Exercício 38
+//Exercício 39
+//Exercício 40
 
 
 
