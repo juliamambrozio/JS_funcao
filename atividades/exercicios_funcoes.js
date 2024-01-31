@@ -610,9 +610,93 @@ function mediaAritmetica(vetor){
 mediaAritmetica([10, 20, 30, 40, 50])
 
 //Exercício 34
+function string(string1, string2){
+    let estaContido = true
+    
+    for(let i = 0; i < string1.length; i++){
+        let palavraString1 = string1.charAt(i).toLowerCase()
+       
+        for(let j = 0; j < string2.length; j++){
+            let palavraString2 = string2.charAt(j).toLowerCase()
+            
+            if(palavraString1 == palavraString2){
+                estaContido = true
+            }else{
+               estaContido = false
+            }
+
+            return estaContido
+        }   
+         
+    }
+
+    return estaContido  
+}
+console.log(string('abc', 'acba'))
+
 //Exercício 35
+function adicionarVetor(vetorPilha = [1, 2, 3, 4, 5], vetorAdiciona = [6, 7, 8, 9, 10]){
+   
+    for(let i = 0; i < vetorAdiciona.length; i++){
+        vetorPilha.push(vetorAdiciona[i])
+    }
+    console.log('Valor adicionado: ' + vetorAdiciona)
+    console.log('Vetor resultado: ' + vetorPilha)
+    
+}
+
+adicionarVetor()
+
 //Exercício 36
+function multiplicacao(vetor, valorNumerico){
+    let resultado1 = []
+   
+    for(let i = 0; i < vetor.length; i++){
+        resultado1.push(vetor[i] * valorNumerico)       
+    }
+    console.log(resultado1)
+    
+}
+function maiorQueCinco(vetor, valorNumerico){
+    let resultado2 = []
+    for(let i = 0; i < vetor.length; i++){
+ 
+        if(valorNumerico > 5){
+            resultado2.push(vetor[i] * valorNumerico) 
+        }
+       
+    }
+    return resultado2 
+}
+    
+multiplicacao([1, 2, 3, 4, 6], 2)
+console.log(maiorQueCinco([1, 2, 3, 4, 6], 8))
+
 //Exercício 37
+function progressaoAritmetica(n, a1, r){
+    let resultadoProgressao = a1 + (n - 1) * r
+    console.log('Termo Geral: '+ resultadoProgressao)
+    for(let i = 0; i <= n; i++){
+        console.log(a1 + r*i)
+    } 
+    let somaProgressao = ((a1 + resultadoProgressao) * n ) /2
+    console.log('Soma da Progressão: ' + somaProgressao)
+}
+
+function progressaoGeometrica(n, a1, r){
+    let resultadoGeometrica = Math.pow(a1 * r, n - 1)
+    console.log('Termo: '+ resultadoGeometrica)
+    for(let i = 0; i <= n; i++){
+        console.log(a1 * (r ** i))
+    } 
+    let somaGeometrica = a1*(r ** n - 1) / (r - 1)
+    console.log('Soma da Geométrica: ' + somaGeometrica)
+    
+}
+
+progressaoAritmetica(10, 10, 15)
+console.log('----------------');
+progressaoGeometrica(10, 5, 3)
 //Exercício 38
 //Exercício 39
 //Exercício 40
