@@ -697,9 +697,67 @@ function progressaoGeometrica(n, a1, r){
 progressaoAritmetica(10, 10, 15)
 console.log('----------------');
 progressaoGeometrica(10, 5, 3)
+
 //Exercício 38
+function intervaloEntreNumeros(inicio = 0, fim = 100){
+    if(inicio > fim){
+        let fim1 = fim
+        let inicio1 = inicio
+        fim = inicio1
+        inicio = fim1
+    }
+    for(let i = 0; i <= fim; i++){
+        if(i % 2 != 0){
+            console.log(i)
+        }
+    }
+}
+
+intervaloEntreNumeros(100, 0)
+
 //Exercício 39
+function trocaVetores(vetorA, vetorB){
+    if(vetorA.length == vetorB.length){
+        for(let i = 0; i < vetorA.length; i++){
+        
+        vetorA[i] = vetorA[i] + vetorB[i] //fazendo a soma de todos os elementos colocanod em vetorA
+        vetorB[i] = vetorA[i] - vetorB[i] //a diferença entre o atual vetorA menos o vetorB, origina o valor antigo de A
+        vetorA[i] = vetorA[i] - vetorB[i] //o atual vetor A menos o atual vetor B, dá o valor do vetor B antigo
+
+      
+        }
+    }else{
+        console.log('Vetores de tamanhos diferentes')
+    }
+    
+    console.log('Novo vetor A: ' + vetorA)
+    console.log('Novo vetor B: ' + vetorB)       
+
+       
+}
+
+trocaVetores([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])
+
 //Exercício 40
+function atribuicaoDeNotas(nota){
+    for(let i = 0; i < nota.length; i++){
+        if(nota[i] < 4.9){
+            console.log(nota[i]+ ' D')
+        }else if(nota[i] < 6.9){
+            console.log(nota[i]+ ' C')
+        }else if(nota[i] < 8.9){
+            console.log(nota[i]+ ' B')
+        }else if(nota[i] < 10.0){
+            console.log(nota[i]+ ' A')
+        }
+        
+        else{
+            console.log('Nota inválida')
+        }
+    }
+}
+
+atribuicaoDeNotas([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 
 
