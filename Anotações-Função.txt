@@ -7,3 +7,12 @@ Parâmetros padrões: formas de informas valores padrões ao parâmetros
 Arguments: referencia aos valores dos parâmetros em formato de array
 This_Bind: como "amarrar" o this ao objeto referenciado independente do lugar 
 que chamar
+ativ2:
+Callback: retornar função várias vezes
+ativ3: 
+Call_Apply: chamando função dentro do objeto para pegar seus atributos e 
+valores
+Comparação: comparação entre class, factory e construtora
+Função construtora: como funciona (instanciar objeto através de uma function,
+objetos públicos e privados)
+Função factory: como funcion (retornar objeto)
